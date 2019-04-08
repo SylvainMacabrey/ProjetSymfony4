@@ -1,0 +1,35 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block body %}
+
+    <div class="container" style="margin-top: 5.5em;">
+        <div class="row">
+            <h3>Recapitulatifs des localisations</h3>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom du lieu</th>
+                        <th scope="col">Nombre d'activité dans ce lieu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for lieu in lieus if lieus is not empty %}
+                    <tr>
+                        <th>{{ loop.index }}</th>
+                        <td>{{ lieu.nom_lieu }}</td>
+                        <td>{{ lieu.countId }}</td>
+                    </tr>
+                {% else %}
+                    <tr><td>Pas de lieu</td></tr>
+                {% endfor %}
+                <tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
+
+

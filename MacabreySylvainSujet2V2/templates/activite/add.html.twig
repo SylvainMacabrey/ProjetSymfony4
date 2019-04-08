@@ -1,0 +1,30 @@
+{% extends "layout/base.html.twig" %}
+
+{% block body %}
+
+    <div class="container col-6" style="margin-top: 5.5em;">
+
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+        {{ form_errors(form) }}
+
+        {{ form_row(form.nomActivite) }}
+
+        {{ form_row(form.dateCreation) }}
+
+        {{ form_row(form.countInscription) }}
+
+        {{ form_row(form.type) }}
+
+        {{ form_row(form.localisationId) }}
+
+        <div class="form-inline">
+            {{ form_row(form.submit, { 'label': 'Ajouter un étudiant' }) }}
+            <a class="btn btn-primary" href="{{ path('activite.index') }}" >Annuler</a>
+        </div>
+
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

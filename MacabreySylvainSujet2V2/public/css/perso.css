@@ -1,0 +1,21 @@
+.form-control {
+    background-color: white;
+}
+
+thead {
+    background-color: #f96332;
+    color: #1b1e21;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #575757;
+}
+
+.center_div{
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+
+
